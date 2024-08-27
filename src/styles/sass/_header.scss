@@ -1,0 +1,51 @@
+$header-height: 72px;
+
+$logo-container-w: 20vw;
+$search-bar-container-w: 50vw;
+$nav-bar-container-w: 20vw;
+$profile-img-container-w: 20vw;
+
+#header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+
+    background-color: #FFFFFF;
+    height: $header-height;
+    flex-direction: row;
+    width: 100%;
+    // border-bottom: 1px gray solid;
+}
+
+#logo-container {
+    width: $logo-container-w;
+    text-align: center;
+}
+
+#search-bar-container {    
+    width: $search-bar-container-w;
+    text-align: center;
+
+    input[type=text] {
+        display: block;
+        text-align: left;
+        width: 95%;
+        height: 47px;
+    }
+}
+
+#nav-bar-container {
+    width: $nav-bar-container-w;
+    display: flex;    
+    flex-direction: row;
+    justify-content: center;
+    
+    a {
+        margin-right: 10%;
+    }
+}
+
+#profile-img-container {
+    width: $profile-img-container-w;
+    text-align: center;
+}

@@ -1,0 +1,13 @@
+$songs-list-height: auto;
+
+#songs-list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+
+    background-color: #FFFFFF;
+    height: $songs-list-height;
+    flex-direction: column;
+    margin-top: 2.5%;
+    width: 100%;
+}
