@@ -1,0 +1,21 @@
+@use 'header';
+
+// Variables
+$background-color: #FFFFFF;
+$font-color: #000000;
+
+// Styles
+
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: $background-color;
+}
+
+#deezer-container {
+    h1 {
+        color: $font-color;        
+    }
+}

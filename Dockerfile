@@ -15,5 +15,5 @@ RUN yarn install
 # Copy the rest of the application files
 COPY . .
 
-# Start development app
-CMD ["yarn", "dev", "--host", "0.0.0.0"]
+# Run sass --watch in the background and start the development app
+CMD ["sh", "-c", "yarn sass-watch & yarn dev --host 0.0.0.0"]
