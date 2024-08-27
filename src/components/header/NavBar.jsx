@@ -3,14 +3,12 @@ import { useState } from 'react';
 const NavBar = () => {
 
     return (
-        <div id="nav-bar-container">
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">Discover</a>
-                <a href="#">Recents</a>
-                <a href="#">Library</a>  
-            </nav>                                  
-        </div>
+        <nav id="nav-bar-container">
+            <a href="#">Home</a>
+            <a href="#" className="active">Discover</a>
+            <a href="#">Recents</a>
+            <a href="#">Library</a>  
+        </nav>                                  
     );
 
 };

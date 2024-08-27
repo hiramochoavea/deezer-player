@@ -1,15 +1,9 @@
-@use 'header';
-@use 'songs-list';
-
-// Variables
-$background-color: #FFFFFF;
-$font-color: #000000;
-$songs-list-height: 90vh;
-
-// Styles
+@import 'header';
+@import 'songs-list';
+@import 'variables';
 
 :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: $font-family;
 }
 
 body, #root {
@@ -19,10 +13,11 @@ body, #root {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: $font-family;    
   }
 
 body {
-    background-color: $background-color;
+    background-color: #FFFFFF;
 }
 
 #deezer-container {
