@@ -5,9 +5,74 @@ $songs-list-height: auto;
     justify-content: center;
     align-items: center;    
 
-    background-color: #FFFFFF;
     height: $songs-list-height;
     flex-direction: column;
-    margin-top: 2.5%;
+    padding-left: 48px;
+    padding-right: 48px;    
+    padding-bottom: 158px;
+}
+
+#search-title-container {
     width: 100%;
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    p {
+        font-family: IBM Plex Sans;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 41.6px;
+        text-align: left;        
+    }
+
+    p.result {
+        font-weight: 500;        
+    }
+}
+
+#gallery-grid-container {
+    width: 100%;    
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+
+    .music-card {
+        width: auto;
+        height: 312px;
+        background-position: center;
+        background-size: cover;
+        border-radius: 16px;
+        display: flex;
+        justify-content: start;
+        align-items: end;
+
+        .card-info {
+            padding-left: 24px;
+            text-align: left;
+
+            h2 {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 26px;           
+                color: white;                 
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20.8px;             
+                color: #FFFFFFB2;                
+            }
+
+            h2, p {
+                margin-top: 0;
+                margin-bottom: 8px;                
+            }
+
+            p:last-child {
+                margin-bottom: 24px;                     
+            }
+        }        
+    }
 }

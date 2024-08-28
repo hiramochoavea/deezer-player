@@ -1,18 +1,133 @@
-/* Error: Expected expression.
- *    ,
- * 70 |         color:    
- *    |                   ^
- *    '
- *   src/styles/sass/_header.scss 70:19  @import
- *   src/styles/sass/index.scss 1:9      root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Expected expression.\a    \2577 \a 70 \2502          color:    \d\a    \2502                    ^\a    \2575 \a   src/styles/sass/_header.scss 70:19  @import\a   src/styles/sass/index.scss 1:9      root stylesheet";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap");
+#header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+  height: 72px;
+  flex-direction: row;
+  width: auto;
+  padding-right: 48px;
+  padding-left: 48px;
+  padding-top: 11px;
 }
+
+#logo-container {
+  width: auto;
+  text-align: left;
+  margin-right: 48px;
+}
+
+#search-bar-container {
+  width: 100%;
+  text-align: center;
+  margin-right: 48px;
+}
+#search-bar-container input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+
+#nav-bar-container {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#nav-bar-container a {
+  margin-right: 24.5px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23.4px;
+  text-align: left;
+  text-decoration: none;
+  color: #000000;
+}
+#nav-bar-container a.active {
+  color: #EF5466;
+}
+
+#profile-img-container {
+  width: auto;
+  text-align: center;
+}
+
+#songs-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  flex-direction: column;
+  padding-left: 48px;
+  padding-right: 48px;
+  padding-bottom: 158px;
+}
+
+#search-title-container {
+  width: 100%;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+#search-title-container p {
+  font-family: IBM Plex Sans;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 41.6px;
+  text-align: left;
+}
+#search-title-container p.result {
+  font-weight: 500;
+}
+
+#gallery-grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+#gallery-grid-container .music-card {
+  width: auto;
+  height: 312px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 16px;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+}
+#gallery-grid-container .music-card .card-info {
+  padding-left: 24px;
+  color: white;
+}
+
+:root {
+  font-family: IBM Plex Sans;
+}
+
+body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: IBM Plex Sans;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+#deezer-container h1 {
+  color: #000000;
+}
+
+/*# sourceMappingURL=index.css.map */

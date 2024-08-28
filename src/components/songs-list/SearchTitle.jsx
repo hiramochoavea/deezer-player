@@ -4,7 +4,10 @@ const SearchTitle = () => {
 
     return (
         <div id="search-title-container">
-            <h1>Search results for: T</h1>
+            <p>
+                Search results for:
+                <b> Adam Beyer</b>
+            </p>
         </div>
     );
 
