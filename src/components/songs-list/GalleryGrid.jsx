@@ -8,7 +8,7 @@ const GalleryGrid = () => {
     useEffect(() => {
         const cards = [];
 
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < 8; i++) {
             cards.push(<MusicCard key={i} />);
         }
         

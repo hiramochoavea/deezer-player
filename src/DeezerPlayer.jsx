@@ -7,11 +7,15 @@ import MusicPlayer from './components/music-player/MusicPlayer';
 
 
 const DeezerPlayer = () => {
+
+    const [isMusicPlayerOpen, setIsMusicPlayerOpen] = useState(false);
+
     return (
-        <div id="deezer-container">
+        // Quitar el siguiente onClick.
+        <div id="deezer-container" onClick={() => setIsMusicPlayerOpen(!isMusicPlayerOpen)}>
             <Header />
-            <SongsList />
-            <MusicPlayer />
+            <SongsList musicPlayerOpen={isMusicPlayerOpen} />
+            <MusicPlayer musicPlayerOpen={isMusicPlayerOpen} />
         </div>
     );
 };
