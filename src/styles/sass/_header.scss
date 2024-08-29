@@ -1,35 +1,29 @@
 @import 'variables';
 
-$header-height: 72px;
-
-$logo-container-w: auto;
-$search-bar-container-w: 100%;
-$nav-bar-container-w: auto;
-$profile-img-container-w: auto;
 
 #header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;    
 
-    background-color: #FFFFFF;
-    height: $header-height;
+    background-color: $header-background-c;
+    min-height: $header-height;
     flex-direction: row;
     width: auto;
     padding-right: 48px;
     padding-left: 48px;
     padding-top: 11px;
-    // border-bottom: 1px gray solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #logo-container {
-    width: $logo-container-w;
+    width: auto;
     text-align: left;
     margin-right: 48px;
 }
 
 #search-bar-container {    
-    width: $search-bar-container-w;
+    width: 100%;
     text-align: center;
     margin-right: 48px;
 
@@ -47,7 +41,7 @@ $profile-img-container-w: auto;
 }
 
 #nav-bar-container {
-    width: $nav-bar-container-w;
+    width: auto;
     display: flex;    
     flex-direction: row;
     justify-content: center;
@@ -68,6 +62,6 @@ $profile-img-container-w: auto;
 }
 
 #profile-img-container {
-    width: $profile-img-container-w;
+    width: auto;
     text-align: center;
 }

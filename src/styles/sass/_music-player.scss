@@ -1,0 +1,72 @@
+@import 'variables';
+
+#music-player-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+
+    background-color: $music-player-background-c;
+    min-height: $music-player-height;
+    flex-direction: row;
+    width: auto;
+    background-color: rgb(240, 240, 240);
+}
+
+#song-info-container {
+    width: auto;
+    text-align: left;
+    margin-left: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;       
+    align-items: center;    
+
+    .track-img-area {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .track-img {
+        width: 80px;
+        height: 80px;
+        gap: 0px;
+        border-radius: 4px 0px 0px 0px;
+        opacity: 0px;        
+    }
+
+    .track-info-area {
+        margin-left: 24px;
+
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 26px;
+            text-align: left;  
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 23.4px;
+            text-align: left;                            
+        }
+
+        h2, p {
+            margin-top: 0;
+            margin-bottom: 4px;                               
+        }      
+    }    
+}
+
+#progress-bar-container {
+    width: auto;
+    text-align: center;
+    margin-right: 143px;
+}
+
+#volume-container {
+    width: auto;
+    display: flex;    
+    flex-direction: row;
+    justify-content: center;
+}

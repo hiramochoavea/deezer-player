@@ -1,5 +1,6 @@
 @import 'header';
 @import 'songs-list';
+@import 'music-player';
 @import 'variables';
 
 :root {
@@ -22,6 +23,10 @@ body {
 }
 
 #deezer-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
     h1 {
         color: $font-color;        
     }
