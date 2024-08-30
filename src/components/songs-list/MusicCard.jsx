@@ -1,12 +1,26 @@
 import React from 'react'
 import tempImg from '../../assets/temp-img.jpeg'
 import playButton from '../../assets/play-button.svg'
+import { useSongsContext } from '../../context/SongsContext';
 
-const MusicCard = () => {
+const MusicCard = (props) => {
+
+    const { songId, songTitle, artistName, labelText, albumCover } = props;
+    const { isMusicPlayerOpen, setIsMusicPlayerOpen, onPlayingTrack } = useSongsContext();
+
+    const handleClick = (songId) => {
+        onPlayingTrack(songId);        
+        setIsMusicPlayerOpen(true);
+    };
 
     return (
 
-    <div className="music-card" style={{backgroundImage: `url(${tempImg})`}}>
+    <div
+        role="button"
+        className="music-card"
+        onClick={() => handleClick(songId)}        
+        style={{backgroundImage: `url(${albumCover})`}}
+    >
 
         <button
             className="play-button"
@@ -14,9 +28,9 @@ const MusicCard = () => {
             style={{ backgroundImage: `url(${playButton})` }}
         />
         <div className="card-info">
-            <h2>Hear The Sound</h2>
-            <p>Adam Beyer</p>
-            <p>Drumcode</p>                        
+            <h2>{songTitle}</h2>
+            <p>{artistName}</p>
+            <p>{labelText}</p>                        
         </div>
         
     </div>

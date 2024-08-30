@@ -12,7 +12,7 @@
   padding-right: 48px;
   padding-left: 48px;
   padding-top: 11px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 6px 25px 0px rgba(0, 0, 0, 0.0509803922);
 }
 
 #logo-container {
@@ -166,19 +166,126 @@
   min-height: 120px;
   flex-direction: row;
   width: auto;
-  background-color: rgb(240, 240, 240);
+  background-color: #FFFFFF;
+  box-shadow: 0px -6px 25px 0px rgba(0, 0, 0, 0.0509803922);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  z-index: 1000;
+  pointer-events: none;
+}
+#music-player-container.visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+#music-player-container.hidden {
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 #song-info-container {
   width: auto;
   text-align: left;
-  margin-right: 48px;
+  margin-left: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#song-info-container .track-img-area {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#song-info-container .track-img {
+  width: 80px;
+  height: 80px;
+  gap: 0px;
+  border-radius: 4px 0px 0px 0px;
+  opacity: 0px;
+}
+#song-info-container .track-info-area {
+  margin-left: 24px;
+}
+#song-info-container .track-info-area h2 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+  text-align: left;
+}
+#song-info-container .track-info-area p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+  text-align: left;
+}
+#song-info-container .track-info-area h2, #song-info-container .track-info-area p {
+  margin-top: 0;
+  margin-bottom: 4px;
 }
 
 #progress-bar-container {
-  width: 100%;
+  width: 50%;
   text-align: center;
-  margin-right: 143px;
+}
+#progress-bar-container .rhap_container {
+  background-color: transparent;
+  box-shadow: none;
+  position: relative;
+}
+#progress-bar-container .rhap_controls-section {
+  justify-content: center;
+}
+#progress-bar-container .rhap_main-controls-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #fff;
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.0705882353);
+  gap: 0px;
+  border-radius: 100%;
+  opacity: 0px;
+}
+#progress-bar-container .iconify {
+  background-color: black;
+}
+#progress-bar-container .rhap_progress-indicator, #progress-bar-container .rhap_volume-indicator {
+  display: none;
+}
+#progress-bar-container .rhap_download-progress {
+  background-color: rgba(0, 0, 0, 0.0509803922);
+  gap: 0px;
+  border-radius: 7px;
+  opacity: 0px;
+}
+#progress-bar-container .rhap_progress-bar {
+  height: 6px;
+  border-radius: 7px;
+}
+#progress-bar-container .rhap_progress-filled, #progress-bar-container .rhap_volume-filled {
+  background-color: #EF5466;
+  border-radius: 7px;
+}
+#progress-bar-container .rhap_time {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18.2px;
+  text-align: left;
+}
+#progress-bar-container .play-btn-small {
+  width: 50px;
+  height: 50px;
+  margin-left: 1px;
+}
+#progress-bar-container .pause-btn-small {
+  width: 18px;
+  height: 18px;
 }
 
 #volume-container {
@@ -186,6 +293,50 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-right: 48px;
+}
+#volume-container .custom-volume-control {
+  display: flex;
+  align-items: center;
+}
+#volume-container .custom-volume-control .volume-input {
+  -webkit-appearance: none;
+  background-color: rgba(0, 0, 0, 0.0509803922);
+  height: 6px;
+  gap: 0px;
+  border-radius: 7px;
+  width: 100px;
+  cursor: pointer;
+  position: relative;
+  margin-left: 11px;
+}
+#volume-container .custom-volume-control .volume-input::-webkit-slider-runnable-track {
+  height: 6px;
+  background: linear-gradient(to right, #EF5466 0%, #EF5466 var(--volume, 0%), rgba(0, 0, 0, 0.0509803922) var(--volume, 0%), rgba(0, 0, 0, 0.0509803922) 100%);
+  border-radius: 7px;
+}
+#volume-container .custom-volume-control .volume-input::-webkit-slider-thumb {
+  display: none;
+}
+#volume-container .custom-volume-control .volume-input::-moz-range-thumb {
+  display: none;
+}
+#volume-container .custom-volume-control .volume-input::-ms-track {
+  height: 6px;
+  background: rgba(0, 0, 0, 0.0509803922);
+  border-color: transparent;
+  color: transparent;
+}
+#volume-container .custom-volume-control .volume-input::-ms-thumb {
+  display: none;
+}
+#volume-container .custom-volume-control .volume-input::-ms-fill-lower {
+  background: #EF5466;
+  border-radius: 5px;
+}
+#volume-container .custom-volume-control .volume-input::-ms-fill-upper {
+  background: rgba(0, 0, 0, 0.0509803922);
+  border-radius: 5px;
 }
 
 :root {
@@ -203,7 +354,7 @@ body, #root {
 }
 
 body {
-  background-color: #FFFFFF;
+  background-color: rgba(252, 252, 252, 0.9);
 }
 
 #deezer-container {

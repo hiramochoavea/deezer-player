@@ -11,6 +11,7 @@
     "sass-watch": "sass --watch src/styles/sass/index.scss src/styles/css/index.css"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-h5-audio-player": "^3.9.3",
