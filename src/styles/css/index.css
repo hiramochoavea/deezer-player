@@ -97,6 +97,12 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
 }
+#gallery-grid-container p.no-results {
+  font-size: 26px;
+  font-weight: 400;
+  text-align: left;
+  opacity: 0.5;
+}
 #gallery-grid-container .music-card {
   position: relative;
   width: auto;
