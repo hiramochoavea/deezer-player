@@ -1,6 +1,5 @@
 import React from 'react'
 
-import tempTrack from '../../assets/temp-track.png'
 import { useSongsContext } from '../../context/SongsContext';
 
 const SongInfo = () => {

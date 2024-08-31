@@ -12,8 +12,6 @@ export const SongsProvider = ({ children }) => {
     const onPlayingTrack = (songId) => {
         const foundSong = searchResults.find( (song) => song.id === songId );
         setPlayingTrack( foundSong );
-        console.log(`CAMBIO`);
-        console.log(foundSong);
     };
 
     return (

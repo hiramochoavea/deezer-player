@@ -15,17 +15,12 @@ const SearchBar = () => {
     const { setSearchTitle, setSearchResults } = useSongsContext();
   
     useEffect(() => {
-
-      if (debouncedQuery.trim() === '')
-        return;
-  
+        
       const fetchSongsResults = async () => {
         const songsByArtist = await searchSongsByArtist( debouncedQuery );
 
         setSearchTitle( debouncedQuery );
         setSearchResults( songsByArtist );
-
-        console.log('Search results:', songsByArtist);
       };
   
       fetchSongsResults();

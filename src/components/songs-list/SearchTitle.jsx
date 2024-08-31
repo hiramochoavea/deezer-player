@@ -7,10 +7,17 @@ const SearchTitle = () => {
 
     return (
         <div id="search-title-container">
-            <p>
-                Search results for:
-                <b> {searchTitle}</b>
-            </p>
+            {searchTitle ? (
+                <p>
+                    <span>Search results for:</span>
+                    <b> {searchTitle}</b>
+                </p>
+            ) : (
+                <p style={{textAlign: 'center'}}>
+                    <b>Welcome! </b>
+                    <span>Try searching for artists using the search bar.</span>
+                </p>
+            )}
         </div>
     );
 

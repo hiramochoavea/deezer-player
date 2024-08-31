@@ -22,9 +22,8 @@ export const searchSongsByArtist = async ( artist ) => {
     }
 
     const result = await response.json();
-    //console.log(result);
 
-    const filteredTracks = result.data.filter(item => item.type === 'track');
+    const filteredTracks = result?.data?.filter(item => item.type === 'track');
 
     return filteredTracks;
   } catch (error) {

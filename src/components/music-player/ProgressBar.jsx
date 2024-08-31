@@ -3,7 +3,6 @@ import { useState, useEffect, useRef } from 'react';
 import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
 import 'react-h5-audio-player/src/styles.scss';
 
-import tempAudio from '../../assets/temp-audio.mp3'
 import pauseButton from '../../assets/pause-btn.svg'
 import playButtonSmall from '../../assets/play-btn-small.svg'
 import { useSongsContext } from '../../context/SongsContext';

@@ -4,7 +4,7 @@ import { useSongsContext } from '../../context/SongsContext';
 
 const GalleryGrid = () => {
 
-    const { searchResults, setIsMusicPlayerOpen } = useSongsContext();
+    const { searchResults, searchTitle, setIsMusicPlayerOpen } = useSongsContext();
 
     const galleryGridRef = useRef(null);
  
@@ -12,9 +12,8 @@ const GalleryGrid = () => {
         const handleClickOutside = (event) => {
             const musicPlayerContainer = document.getElementById('music-player-container');
 
-            if ( galleryGridRef.current &&
-                !galleryGridRef.current.contains(event.target) &&
-                !musicPlayerContainer.contains(event.target)
+            if ( !galleryGridRef?.current?.contains(event.target) &&
+                 !musicPlayerContainer?.contains(event.target)
             ) {
                 // Close music player when the user clicks outside of gallery grid (except on music player).
                 setIsMusicPlayerOpen(false);
@@ -30,16 +29,20 @@ const GalleryGrid = () => {
 
     return (
         <div id="gallery-grid-container" ref={galleryGridRef}>
-            { searchResults?.map((result, index) => (
-                <MusicCard
-                    key={result.id || index}
-                    songId={result.id}
-                    songTitle={result.title}
-                    artistName={result.artist.name}
-                    labelText={result.album.title}
-                    albumCover={result.album.cover_big}
-                />
-            )) }
+            {searchResults?.length > 0 ? (
+                searchResults?.map((result, index) => (
+                    <MusicCard
+                        key={result.id || index}
+                        songId={result.id}
+                        songTitle={result.title}
+                        artistName={result.artist.name}
+                        labelText={result.album.title}
+                        albumCover={result.album.cover_big}
+                    />
+                    ))
+                ) : (
+                searchTitle && (<p className="no-results">No results found for this search.</p>)
+            )}
         </div>                                                                                    
     );
 
