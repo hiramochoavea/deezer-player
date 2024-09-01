@@ -29,6 +29,7 @@ To get the application up and running, follow these steps:
 ### 1. Clone the Repository
 
 git clone https://github.com/hiramochoavea/deezer-player.git
+
 cd deezer-player
 
 ### 2. Build and Run with Docker
@@ -42,7 +43,9 @@ Your application will be accessible at http://localhost:5173.
 ### Running Locally (Without Docker)
 
 yarn install
+
 yarn dev
+
 yarn sass-watch
 
 ### Running unit-tests
