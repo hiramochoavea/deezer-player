@@ -4,6 +4,8 @@ Welcome to the Deezer Player Clone project! This is a basic React application th
 
 This project was built on Node.js `v20` and React `v18`.
 
+A preview can be found here: https://deezer-clone-hochoa.netlify.app/
+
 ## Features
 
 - **Search for Artists**: Look up your favorite artists and find their songs.
